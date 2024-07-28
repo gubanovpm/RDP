@@ -29,5 +29,5 @@ endForeach()
 add_custom_target(shaders ALL DEPENDS ${SPV_SHADERS})
 
 add_subdirectory(ThirdParty/glfw)
-add_subdirectory(srcs)
+add_subdirectory(sources)
 
