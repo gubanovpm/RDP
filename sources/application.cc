@@ -41,8 +41,10 @@ void application::initVulkan() {
 }
 
 void application::mainLoop() {
+  glfwSetInputMode(window,  GLFW_STICKY_KEYS, GLFW_TRUE);
   while (!glfwWindowShouldClose(window)) {
     glfwPollEvents();
+    glfwSetKeyCallback(window, Camera::key_callback);
     drawFrame();
   }
 

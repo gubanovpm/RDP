@@ -10,7 +10,8 @@ find_package(Vulkan REQUIRED)
 
 include_directories(
   include
-  ThirdParty/glfw/include
+  externals/glfw/include
+  externals/glm/
   shaders
 )
 
@@ -28,6 +29,6 @@ foreach(SHADER IN LISTS SHADERS)
 endForeach()
 add_custom_target(shaders ALL DEPENDS ${SPV_SHADERS})
 
-add_subdirectory(ThirdParty/glfw)
+add_subdirectory(externals/glfw)
+add_subdirectory(externals/glm)
 add_subdirectory(sources)
-

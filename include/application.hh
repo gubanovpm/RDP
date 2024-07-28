@@ -6,6 +6,7 @@
 
 #include <queue_family.hh>
 #include <SwapChainSupportDetails.hh>
+#include <Camera.hh>
 
 #include <fstream>
 #include <cstdint>
@@ -31,6 +32,8 @@ private:
   VkDevice device = VK_NULL_HANDLE;
   VkSurfaceKHR surface = VK_NULL_HANDLE;
   VkPhysicalDevice physicalDevice = VK_NULL_HANDLE;
+
+  Camera camera;
 
   VkSwapchainKHR swapChain;
   std::vector<VkImage> swapChainImages;
